@@ -20,15 +20,23 @@
 
 2:Install LEMP :
 sudo yum update 
+
 sudo yum install nginx php php-fpm
+
 php-mysqlnd mariadb-server -y
 
 3:Start Services
+
 sudo systemctl start nginx
+
 sudo systemctl enable nginx
+
 sudo systemctl start php-fpm
+
 sudo systemctl enable php-fpm
+
 sudo systemctl start mariadb
+
 sudo systemctl enable mariadb
   ![](./img/Screenshot%202026-05-03%20222924.png)
 
@@ -39,17 +47,25 @@ sudo systemctl enable mariadb
 
 6:Setup Database
 Login:
+
 mysql -u root -p
+
 Create database: CREATE DATABASE FCT;
+
 Create table:
+
 USE FCT;
+
 CREATE TABLE students ( id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100),email VARCHAR(50));
 
 7: Create files
+
 signup.html - for ui
+
 submit.php -for backend
 
 8: Download connector
+
 sudo yum install php8.5-mysqlnd.x86_64 -y
 
 9: After all steps restart the system
@@ -58,7 +74,7 @@ sudo yum install php8.5-mysqlnd.x86_64 -y
 10: Access website using public ip
 open browser
  ![](./img/right%20data.png)
- 
+
 11: Fill form and submit data
   ![](./img/submit.png)
 
